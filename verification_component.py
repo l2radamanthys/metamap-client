@@ -24,4 +24,16 @@ class VerificationComponent(MMBaseClient):
         return response.json()
 
     def download_results(self, ids):
-        pass
+        raise MatiException("Don't implement")
+
+    def start(self, flow_id, metadata):
+        raise MatiException("Don't implement")
+
+    def send_inputs(self, *args, **argvs):
+        raise MatiException("Don't implement")
+
+    def update_status(self, status):
+        raise MatiException("Don't implement")
+
+    def skip_upload_wait_time(self, id_):
+        raise MatiException("Don't implement")
