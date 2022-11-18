@@ -70,6 +70,3 @@ class ApiClient(object):
 
     def delete_request(self, endpoint, params=None, data=None, headers=None):
         pass
-
-
-

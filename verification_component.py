@@ -1,4 +1,3 @@
-
 from base_client import MatiException, MMBaseClient
 
 
@@ -14,10 +13,14 @@ class VerificationComponent(MMBaseClient):
         if response.status_code == 200:
             return response_data
         else:
-            raise MatiException(f"Error {response.status_code}: {response_data.get('message')}")
+            raise MatiException(
+                f"Error {response.status_code}: {response_data.get('message')}"
+            )
 
     def get_media(self, media_auth):
-        response = self.get_request(f"/file?location={media_auth}", headers=self.headers)
+        response = self.get_request(
+            f"/file?location={media_auth}", headers=self.headers
+        )
         return response.json()
 
     def download_results(self, ids):

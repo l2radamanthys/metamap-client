@@ -10,8 +10,6 @@ class ArgCreditCheckComponent(MMBaseClient):
     def get(self, cuit, callbackUrl):
         payload = {"cuit": cuit, "callbackUrl": callbackUrl}
         response = self.post_request(
-            "/ar/credit-fidelitas", 
-            data=payload, 
-            headers=self.headers
+            "/ar/credit-fidelitas", data=payload, headers=self.headers
         )
         return response
